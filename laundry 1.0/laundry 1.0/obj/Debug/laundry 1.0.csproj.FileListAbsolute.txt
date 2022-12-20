@@ -1,0 +1,20 @@
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\bin\Debug\laundry 1.0.exe.config
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\bin\Debug\laundry 1.0.exe
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\bin\Debug\laundry 1.0.pdb
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\bin\Debug\EntityFramework.dll
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\bin\Debug\EntityFramework.SqlServer.dll
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\bin\Debug\EntityFramework.xml
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\bin\Debug\EntityFramework.SqlServer.xml
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry 1.0.csprojResolveAssemblyReference.cache
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry_1._0.Form1.resources
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry_1._0.Properties.Resources.resources
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry 1.0.csproj.GenerateResource.Cache
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry 1.0.csproj.CoreCompileInputs.cache
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry 1.0.exe
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry 1.0.pdb
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry_1._0.Login.resources
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry_1._0.FrmTransaksi.resources
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry_1._0.FrmLaporan.resources
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry_1._0.FrmPaket.resources
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry_1._0.FrmPelanggan.resources
+A:\Kuliah\SEMESTER 3\Pemrograman Visual\Tugas\Proyek Laundry\laundry 1.0\laundry 1.0\obj\Debug\laundry_1._0.FrmPengguna.resources

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="laundryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="paket">
+    <Key>
+      <PropertyRef Name="id_paket" />
+    </Key>
+    <Property Name="id_paket" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nama_paket" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="harga_satuan" Type="Int32" />
+    <Property Name="durasi" Type="Int32" />
+  </EntityType>
+  <EntityType Name="pelanggan">
+    <Key>
+      <PropertyRef Name="id_pel" />
+    </Key>
+    <Property Name="id_pel" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nama_pel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="alamat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telp" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="transaksi_ambil">
+    <Key>
+      <PropertyRef Name="id_tp" />
+    </Key>
+    <Property Name="id_tp" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_tm" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="id_user" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="id_pel" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="tgl_tp" Type="DateTime" Precision="0" />
+    <Property Name="bayar_tp" Type="Int32" />
+  </EntityType>
+  <EntityType Name="transaksi_masuk">
+    <Key>
+      <PropertyRef Name="id_tm" />
+    </Key>
+    <Property Name="id_tm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tgl_tm" Type="String" />
+    <Property Name="tgl_ambil" Type="String" />
+    <Property Name="total_harga" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nama_pel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="telp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="upass" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="level" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="detail_tm">
+    <Key>
+      <PropertyRef Name="id_tm" />
+    </Key>
+    <Property Name="no" Type="String" />
+    <Property Name="id_tm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="diskon" Type="String" />
+    <Property Name="nama_paket" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="berat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="sub_total" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="laundryEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="pakets" EntityType="Self.paket" />
+    <EntitySet Name="pelanggans" EntityType="Self.pelanggan" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="transaksi_ambil" EntityType="Self.transaksi_ambil" />
+    <EntitySet Name="transaksi_masuk" EntityType="Self.transaksi_masuk" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="detail_tm" EntityType="Self.detail_tm" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="laundryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'laundry.dbo.detail_tm' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="detail_tm">
+    <Key>
+      <PropertyRef Name="id_tm" />
+    </Key>
+    <Property Name="no" Type="varchar" MaxLength="10" />
+    <Property Name="id_tm" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nama_paket" Type="varchar" MaxLength="20" />
+    <Property Name="berat" Type="varchar" MaxLength="10" />
+    <Property Name="diskon" Type="varchar" MaxLength="10" />
+    <Property Name="sub_total" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="paket">
+    <Key>
+      <PropertyRef Name="id_paket" />
+    </Key>
+    <Property Name="id_paket" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nama_paket" Type="varchar" MaxLength="30" />
+    <Property Name="harga_satuan" Type="int" />
+    <Property Name="durasi" Type="int" />
+  </EntityType>
+  <EntityType Name="pelanggan">
+    <Key>
+      <PropertyRef Name="id_pel" />
+    </Key>
+    <Property Name="id_pel" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="nama_pel" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="alamat" Type="varchar" MaxLength="50" />
+    <Property Name="telp" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="transaksi_ambil">
+    <Key>
+      <PropertyRef Name="id_tp" />
+    </Key>
+    <Property Name="id_tp" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="id_tm" Type="varchar" MaxLength="6" />
+    <Property Name="id_user" Type="varchar" MaxLength="6" />
+    <Property Name="id_pel" Type="varchar" MaxLength="6" />
+    <Property Name="tgl_tp" Type="date" />
+    <Property Name="bayar_tp" Type="int" />
+  </EntityType>
+  <EntityType Name="transaksi_masuk">
+    <Key>
+      <PropertyRef Name="id_tm" />
+    </Key>
+    <Property Name="id_tm" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="tgl_tm" Type="varchar" MaxLength="50" />
+    <Property Name="tgl_ambil" Type="varchar" MaxLength="50" />
+    <Property Name="total_harga" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="10" />
+    <Property Name="nama_pel" Type="varchar" MaxLength="30" />
+    <Property Name="id_pel" Type="nchar" MaxLength="10" />
+    <Property Name="telp" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="uname" Type="varchar" MaxLength="30" />
+    <Property Name="upass" Type="varchar" MaxLength="30" />
+    <Property Name="level" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="laundryModelStoreContainer">
+    <EntitySet Name="paket" EntityType="Self.paket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pelanggan" EntityType="Self.pelanggan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transaksi_ambil" EntityType="Self.transaksi_ambil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transaksi_masuk" EntityType="Self.transaksi_masuk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detail_tm" EntityType="Self.detail_tm" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [detail_tm].[no] AS [no], 
+    [detail_tm].[id_tm] AS [id_tm], 
+    [detail_tm].[nama_paket] AS [nama_paket], 
+    [detail_tm].[berat] AS [berat], 
+    [detail_tm].[diskon] AS [diskon], 
+    [detail_tm].[sub_total] AS [sub_total]
+    FROM [dbo].[detail_tm] AS [detail_tm]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
